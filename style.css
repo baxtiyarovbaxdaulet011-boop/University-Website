@@ -1,0 +1,178 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{
+            background: white;
+        }
+
+        /* NAVBAR */
+
+        header{
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 70px;
+
+            background: linear-gradient(90deg,#b312ff,#2b9cff);
+        }
+
+        .logo{
+            font-size: 35px;
+            font-weight: bold;
+            color: #f6c90e;
+        }
+
+        nav{
+            background: white;
+            padding: 12px 25px;
+            border-radius: 20px;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #222;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            color: #1e90ff;
+        }
+
+        .active{
+            background: linear-gradient(90deg,#ff4fd8,#34b3ff);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+        }
+
+        /* HOME */
+
+        .home{
+            width: 100%;
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            padding: 80px;
+        }
+
+        /* TEXT */
+
+        .text h1{
+            font-size: 60px;
+            color: #000;
+        }
+
+        .text h2{
+            font-size: 55px;
+            color: #f6c90e;
+            margin-top: 10px;
+        }
+
+        .text p{
+            margin-top: 20px;
+            font-size: 22px;
+            color: #666;
+            line-height: 35px;
+        }
+        nav a{
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+
+    padding: 10px 20px;   /* SHUNI QO‘SH */
+    border-radius: 15px;  /* SHUNI QO‘SH */
+    display: inline-block; /* SHUNI QO‘SH */
+}
+.active{
+    background: none;
+    color: black;
+}
+
+nav a:hover{
+    background: linear-gradient(90deg,#ff4fd8,#34b3ff);
+    color: white;
+}
+
+        /* BUTTON */
+
+        button{
+            margin-top: 30px;
+            padding: 15px 35px;
+
+            border: none;
+            border-radius: 15px;
+
+            background: #25b7ff;
+            color: white;
+
+            font-size: 18px;
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #030cf8;
+        }
+
+        /* IMAGE */
+
+        .image img{
+            width: 360px;
+            height: 360px;
+
+            object-fit: cover;
+            border-radius: 50%;
+
+            border: 6px solid #25b7ff;
+        }
+
+        /* ABOUT */
+
+        .about{
+            width: 100%;
+            min-height: 450px;
+
+            background: linear-gradient(90deg,#0077ff,#4ecbff);
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            padding: 50px;
+        }
+
+        .about img{
+            width: 320px;
+            border-radius: 20px;
+        }
+
+        .about-text{
+            color: white;
+        }
+
+        .about-text h1{
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p{
+            width: 500px;
+            line-height: 35px;
+            font-size: 22px;
+        }
