@@ -3,160 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-<link rel="stylesheet" href="./style.css">
-    
+    <title>Baxdaulet Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <header>
+    <div class="logo">Baxdaulet</div>
 
-    <!-- NAVBAR -->
+    <nav>
+        <a href="#hero" class="nav-link active">Men haqimda</a>
+        <a href="./Oilam.html" class="nav-link">Oilam</a>
+        <a href="./Loyhalarim.html" class="nav-link">Loyihalarim</a>
+        <a href="./Ososi loyham.html">Ososi loyham</a>
+    </nav>
+</header>
+    
 
-    <header>
+    
+    <section id="hero" class="hero">
+        <div class="text" >
 
-        <div class="logo">
-            Baxdaulet
-        </div>
 
-        <nav>
-            <a class="active" href="./Men haqimda">Men haqimda</a>
-            <a href="#">Oilam</a>
-            <a href="#">Loyihalarim</a>
-            <a href="#">Guruhdoshlarim</a>
-        </nav>
-
-    </header>
-
-    <!-- HOME -->
-
-    <section class="home">
-
-        <div class="text">
-
-            <h1>
-                Assalomu alaykum <br>
-                mening ismim
-            </h1>
-
-            <h2>Bilolbek</h2>
+            <h1>Assalomu alaykum <br> mening ismim</h1>
+            <h2>Baxdaulet</h2>
 
             <p>
-                Men PDP Juniorning Bektemr filialida
+                Men PDP Juniorning Bektemr filialida    
                 3-oydan beri o‘qiyman.
             </p>
 
-            <button>
-                Ko‘proq ma’lumot
-            </button>
-
+            <a href="#about" class="salom">Ko'proq ma'lumot</a>
         </div>
 
         <div class="image">
-            <img src="./photo_2026-01-21_18-13-53.jpg">
+            <img src="./photo_2026-01-21_18-13-53.jpg" alt="">
         </div>
-
     </section>
-
-    <!-- ABOUT -->
-
-    <section class="about">
-
-        <div>
-            <img src="./photo_2026-01-21_18-13-53.jpg">
-        </div>
-
-        <div class="about-text">
-
-            <h1>
-                Mening to‘liq ismim
-                Falonchayev
-            </h1>
-
-            <p>
-                Men dasturlashga juda qiziqaman.
-                HTML va CSS da saytlar qilaman.
-                Kelajakda katta dasturchi bo‘lishni
-                xohlayman.
-            </p>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <section  id="about" class="about2" id="family">
+
+    <div class="left">
+        <img src="./photo_2026-01-21_18-13-53.jpg" alt="">
+    </div>
+
+    <div class="right">
+        <h1>Men haqimda malmot</h1>
+
+        <p>
+            Mening to'liq ismim Baxtiyorov Baxdaulet 
+              Aldiyar o'g'li. Men 45-maktabinig 8-sinifti bitirdim.
+               IT dan tashqari,  Fizika va Matematikaga ham qiziqaman.
+                Bundan tashqari futbolga ham qiziqaman. Yaxshi ko'rgan
+                 futbol klubim Rial Madrid
+        </p>
+
+        <button id="logo">Men bilan bog'lanish</button>
+    </div>
+
+</section>
+<br>
+<div class="container">
+    
+        <h1  class="page-title">Men bilan bog'lanish</h1>
+
+        <div class="contact-wrapper">
         
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Xabar yuborildi!');">
+                <div class="form-group">
+                    <label for="name">Ism familya</label>
+                    <input type="text" id="name" required>
+                </div>
 
-    </section>
+                <div class="form-group">
+                    <label for="phone">Telefon raqami</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Xabar</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Yuborish</button>
+            </form>
+
+            
+            <div class="map-container">
+                <iframe src="https://yandex.ru" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br> 
+    <br>
+    <br>
+    
+    <nav class="footer">
+        <footer class="footer">
+        <div class="footer-content">
+            <div class="brand-name">Baxdaulet</div>
+            
+           <div class="social-container">
+  <a href="https://t.me" class="social-btn telegram" target="_blank" rel="noopener">
+    <span>Telegram</span>
+  </a>
+  <a href="https://instagram.com" class="social-btn instagram" target="_blank" rel="noopener">
+    <span>Instagram</span>
+  </a>
+</div>
+
+        </div>
+    </nav>
+
+
 
 </body>
 </html>

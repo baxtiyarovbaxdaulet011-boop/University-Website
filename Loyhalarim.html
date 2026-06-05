@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+     background:linear-gradient(90deg,#040607,#00d5ff,#080709);
+    color:white;
+}
+.title{
+    margin-bottom: 120px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+}
+.projects-title{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 40px; 
+}
+#loyhalarim h2{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.logo{
+    font-size:60px;
+    font-weight:bold;
+    color:#37dff5;
+    }
+.nav{
+    position:absolute;
+    top:20px;
+    right:50px;
+    background:white;
+    padding:15px 30px;
+    border-radius:50px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 15px;
+    font-weight:600;
+}
+
+.nav a.active{
+    color:#0d6efd;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.card{
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid #1e90ff;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #1e90ff;
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px;
+    font-size:28px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  font-size: 20px;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">Baxdaulet</div>
+
+    <div class="nav">
+        <a href="./index.html">Men haqimda</a>
+        <a href="./Oilam.html">Oilam</a>
+        <a href="./Loyhalarim.html" class="active">Loyihalarim</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div> 
+        <h2 class="title">Loyhalarim</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="./image copy.png" alt="">
+            <h3>Bu mening 1-oyda qilgan loyiham</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image copy 2.png" alt="">
+            <h3>Bu mening 2-oyda qilgan loyiham</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image copy 3.png" alt="">
+            <h3>Bu mening 3-oyda qilgan loyiham</h3>
+        </div>
+
+        <div class="card">
+            <img src="./image copy 4.png" alt="">
+            <h3>Bu mening 3-oyning 5darsda qilgan loyiham</h3>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
