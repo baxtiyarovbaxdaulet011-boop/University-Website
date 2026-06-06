@@ -1,167 +1,189 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Loyihalarim</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-body{
-     background:linear-gradient(90deg,#040607,#00d5ff,#080709);
-    color:white;
-}
-.title{
-    margin-bottom: 120px;
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    width: 100%;
-}
-.projects-title{
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    margin-bottom: 40px; 
-}
-#loyhalarim h2{
-    text-align: center;
-    color: white;
-    font-size: 50px;
-    margin-bottom: 40px;
-}
-#projects{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.container{
-    width:90%;
-    margin:auto;
-    padding:30px 0;
-}
+        body {
+            background: linear-gradient(135deg, #05070a, #0b0f19, #05070a);
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
 
-.logo{
-    font-size:60px;
-    font-weight:bold;
-    color:#37dff5;
-    }
-.nav{
-    position:absolute;
-    top:20px;
-    right:50px;
-    background:white;
-    padding:15px 30px;
-    border-radius:50px;
-}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 0;
+        }
 
-.nav a{
-    text-decoration:none;
-    color:#333;
-    margin:0 15px;
-    font-weight:600;
-}
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
 
-.nav a.active{
-    color:#0d6efd;
-}
+        .logo {
+            font-size: 36px;
+            font-weight: 800;
+            color: #00bfff;
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+            letter-spacing: 1px;
+        }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:40px;
-}
+        .nav {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-.card{
-    background:#111;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid #1e90ff;
-    transition:.4s;
-}
+        .nav a {
+            text-decoration: none;
+            color: #94a3b8;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px #1e90ff;
-}
+        .nav a:hover, .nav a.active {
+            color: #00bfff;
+            text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+        }
 
-.card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
+        
+        .title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #ffffff;
+        }
 
-.card h3{
-    padding:20px;
-    font-size:28px;
-}
+        .title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #00bfff;
+            margin: 12px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 8px #00bfff;
+        }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+        .card {
+            background: #090d16;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-.form-group label {
-  font-size: 20px;
-  font-weight: 500;
-}
-</style>
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 191, 255, 0.15);
+            border-color: rgba(0, 191, 255, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            filter: brightness(0.85);
+            transition: 0.4s ease;
+        }
+
+        .card:hover img {
+            filter: brightness(1);
+        }
+
+        .card h3 {
+            padding: 22px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .title {
+                font-size: 32px;
+            }
+            .card h3 {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
 
-    <div class="logo">Baxdaulet</div>
-
-    <div class="nav">
-        <a href="./index.html">Men haqimda</a>
-        <a href="./Oilam.html">Oilam</a>
-        <a href="./Loyhalarim.html" class="active">Loyihalarim</a>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div> 
-        <h2 class="title">Loyhalarim</h2>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="./image copy.png" alt="">
-            <h3>Bu mening 1-oyda qilgan loyiham</h3>
+    <header>
+        <div class="logo">Baxdaulet</div>
+        <div class="nav">
+            <a href="./index.html">Men haqimda</a>
+            <a href="./Oilam.html">Oilam</a>
+            <a href="./Loyihalarim.html" class="active">Loyihalarim</a>
         </div>
+    </header>
 
-        <div class="card">
-            <img src="./image copy 2.png" alt="">
-            <h3>Bu mening 2-oyda qilgan loyiham</h3>
+    <main>
+        <h2 class="title">Loyihalarim</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="./image copy.png" alt="1-oy loyihasi">
+                <h3>Bu mening 1-oyda qilgan loyiham</h3>
+            </div>
+
+            <div class="card">
+                <img src="./image copy 2.png" alt="2-oy loyihasi">
+                <h3>Bu mening 2-oyda qilgan loyiham</h3>
+            </div>
+
+            <div class="card">
+                <img src="./image copy 3.png" alt="3-oy loyihasi">
+                <h3>Bu mening 3-oyda qilgan loyiham</h3>
+            </div>
+
+            <div class="card">
+                <img src="./image copy 4.png" alt="3-oy 5-dars loyihasi">
+                <h3>Bu mening 3-oyning 5-darsida qilgan loyiham</h3>
+            </div>
+
         </div>
-
-        <div class="card">
-            <img src="./image copy 3.png" alt="">
-            <h3>Bu mening 3-oyda qilgan loyiham</h3>
-        </div>
-
-        <div class="card">
-            <img src="./image copy 4.png" alt="">
-            <h3>Bu mening 3-oyning 5darsda qilgan loyiham</h3>
-        </div>
-
-    </div>
+    </main>
 
 </div>
 

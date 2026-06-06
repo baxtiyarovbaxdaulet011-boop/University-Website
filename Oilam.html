@@ -3,125 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bu mening oilam — Asadbek</title>
-    <!-- Ijtimoiy tarmoqlar piktogrammalari uchun Font Awesome ulanishi -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Bu mening oilam </title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    min-height:100vh;
-    background:linear-gradient(90deg,#040607,#00d5ff,#080709);
-}
-
-header{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    padding:20px 50px;
-}
-
-.logo{
-    font-size:60px;
-    font-weight:bold;
-    color:#38a5b8;
-}
-
-nav{
-    background:linear-gradient(45deg,#ff00ff,#6ea8ff);
-    color:#fff;
-    background:#fff;
-    padding:15px;
-    border-radius:20px;
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    
-    text-decoration:none;
-    color:black;
-    padding:12px 22px;
-    border-radius:15px;
-}
-
-nav a.active{
-    background:linear-gradient(90deg,#1fa2ff,#020002);
-    color:white;
-}
-
-section{
-    min-height:100vh;
-    padding:100px 50px;
-    color:white;
-}
-
-h2{
-    margin-bottom:20px;
-    font-size:40px;
-}
-nav ul li a{
-    text-decoration:none;
-    color:black;
-    padding:15px 30px;
-    border-radius:18px;
-    transition:0.3s;
-}
-
-.active{
-    background:linear-gradient(45deg,#2f9cff,#000);
-    color:white;
-    box-shadow:0 0 15px #2f9cff;
-}
-.qanday{
-   background:linear-gradient(45deg,#2f9cff,#000);
-    color:white;
-    box-shadow:0 0 15px #2f9cff; 
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
         body {
-            background-color: #ffffff;
-            color: #000000;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #ffffff;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
         }
-        .navbar {
+
+        header {
             display: flex;
-             
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            padding: 15px 40px;
-            width: 100%;
-            height: 80px;
-            
-        
-            background: linear-gradient(100%,#8186cf #324a62);
-            background-size: 300% 100%;
-            
-        
-            animation: gradientMove 12s ease-in-out infinite;
+            padding: 20px 50px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #38a5b8;
+        }
 
+        nav {
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e293b;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a.active {
+            background: linear-gradient(90deg, #1fa2ff, #12d6df);
+            color: white;
+            box-shadow: 0 4px 15px rgba(31, 162, 255, 0.4);
+        }
+
+        nav a:hover:not(.active) {
+            background: #f1f5f9;
+        }
+
+    
         .main-header {
+             -webkit-background-clip: text;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 40px;
+            margin: 50px 0 20px 0;
         }
 
         .main-header h1 {
+             background-clip: text;
             font-size: 45px;
             font-weight: 700;
+            background: linear-gradient(90deg, #38a5b8, #1fa2ff);
+            -webkit-text-fill-color: transparent;
         }
 
-
         .container {
+            -webkit-background-clip: text;
             max-width: 1100px;
             width: 100%;
             margin: 0 auto;
@@ -129,13 +91,16 @@ nav ul li a{
             flex-grow: 1;
         }
 
-
         .content-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 60px;
-            margin-bottom: 100px; 
+            margin-bottom: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .text-block {
@@ -143,39 +108,40 @@ nav ul li a{
         }
 
         .text-block h2 {
-            font-size: 38px;
+            font-size: 32px;
             font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #1fa2ff;
         }
 
         .text-block p {
             font-size: 18px;
-            line-height: 1.5;
-            color: #333333;
+            line-height: 1.6;
+            color: #cbd5e1;
         }
 
         .image-block {
             flex: 1;
             display: flex;
+            justify-content: center;
         }
-
-        
-        .align-right { justify-content: flex-end; }
-        .align-left { justify-content: flex-start; }
 
         .image-block img {
             max-width: 100%;
+            max-height: 300px;
             height: auto;
-            display: block;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            object-fit: cover;
+            border: 3px solid rgba(31, 162, 255, 0.5);
         }
 
-        
-        .footer {
+        footer {
             width: 100%;
-            background: linear-gradient(90deg, #04080a 0%, #397ac3 50%, #040708 100%);
-            padding: 25px 0;
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+            padding: 30px 0;
             margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-content {
@@ -187,139 +153,132 @@ nav ul li a{
             align-items: center;
         }
 
-        /* Foterdagi muallif ismi */
         .brand-name {
             color: #59b7fb; 
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
         }
 
-    
-        .social-icons {
+        .social-container {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .social-icons a {
-            color: white;
-            font-size: 24px;
+        .social-btn {
             text-decoration: none;
-            transition: opacity 0.3s, transform 0.2s;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: transform 0.2s, opacity 0.2s;
         }
 
-        .social-icons a:hover {
-            opacity: 0.8;
-            transform: scale(1.1);
+        .telegram { background-color: #0088cc; }
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
         }
 
-    
+       
         @media (max-width: 768px) {
-            .main-header h1 {
-                font-size: 32px;
-                margin-top: 30px;
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
             }
 
             .content-container {
                 flex-direction: column !important; 
                 gap: 30px;
                 text-align: center;
-                margin-bottom: 60px;
             }
 
-            .text-block h2 {
-                font-size: 30px;
-            }
-
-            .image-block {
-                justify-content: center !important;
+            .main-header h1 {
+                font-size: 32px;
             }
 
             .footer-content {
                 flex-direction: column;
                 gap: 15px;
-                text-align: center;
-            }
-            .container {
-             width: 100%;
-            max-width: 1140px;
-             margin: 0 auto;
             }
         }
     </style>
 </head>
 <body>
-   <header>
-    <div class="logo">Baxdaulet</div>
 
-    <nav>
-        <a href="./index.html" class="nav-link active">Men haqimda</a>
-        <a href="./Oilam.html" class="active">Oilam</a>
-        <a href="./Loyhalarim.html" class="qanday">Loyihalarim</a>
-        
-    </nav>
-</header>
-<script>
-const links = document.querySelectorAll('.nav-link');
-
-links.forEach(link => {
-    link.addEventListener('click', function() {
-        links.forEach(item => item.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
-</script>
-    <header class="main-header">
-        <h1>Bu mening oilam</h1>
+    <header>
+        <div class="logo">Baxdaulet</div>
+        <nav>
+            <a href="./index.html">Men haqimda</a>
+            <a href="./Oilam.html" class="active">Oilam</a>
+            <a href="./Loyhalarim.html">Loyihalarim</a>
+            <a href="./Ososi loyham.html">Ososi loyham</a>
+        </nav>
     </header>
-    <div class="container">
 
-    
+    <main class="container">
+        <header class="main-header">
+            
+            <h1>Bu mening oilam</h1>
+
+        </header>
+
+       
         <section class="content-container">
             <div class="text-block">
-                <h2>Bu mening Dadam</h2>
-                <p>Dadamni ismilari Aldiyar dadamlar 1986-yilgi yoshlari 40-da hozir Dadam kata bir firmada ishlaydi.
-
-                </p>
+                <h2>Bu mening dadam</h2>
+                <p>Dadamning ismlari Aldiyar. Dadamlar 1986-yilda tugʻilganlar, yoshlari 40 da. Hozirda dadam katta bir firmada ishlaydilar.</p>
             </div>
-            <div class="image-block align-right">
+            <div class="image-block">
                 <img src="./photo_2026-01-21_18-13-53.jpg" alt="Dadam">
             </div>
         </section>
 
-
+        
         <section class="content-container" style="flex-direction: row-reverse;">
             <div class="text-block">
-                <h2>Bu mening Onam</h2>
-                <p>Onamni islilari Gulipa Onamni yoshlari 1989-yilgi 7-chi marta onam hozir do'htir honada ishlaydim.</p>
+                <h2>Bu mening onam</h2>
+                <p>Onamning ismlari Gulipa. Onamning yoshlari 37 da (1989-yilgi). Hozirda oyim shfakor honada ishlaydilar.</p>
             </div>
-            <div class="image-block align-left">
+            <div class="image-block">
                 <img src="./photo_2026-01-21_18-13-53.jpg" alt="Onam">
             </div>
         </section>
 
-    
+        
         <section class="content-container">
             <div class="text-block">
-                <h2>Bu mening<br>Ukam</h2>
-                <p>Ukamni ismi Alinur ukam hozir 2-sinifda o'qiydi ukamni yoshi 8-da  ukam fudbolga qiziqadi.</p>
+                <h2>Bu mening ukam</h2>
+                <p>Ukamning ismi Alinur. Ukam hozirda 2-sinfda oʻqiydi, yoshi 8 da. Ukam futbol oynashni yahshi koradi.</p>
             </div>
-            <div class="image-block align-right">
-                <img src="./photo_2026-01-21_18-13-53.jpg" alt="Akam / Ukam">
+            <div class="image-block">
+                <img src="./photo_2026-01-21_18-13-53.jpg" alt="Ukam">
             </div>
         </section>
+    </main>
 
-      
-    <!-- Foter qismi -->
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
             <div class="brand-name">Baxdaulet</div>
-            <div class="social-icons">
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="tel:+998900000000"><i class="fas fa-phone-alt"></i></a>
+            <div class="social-container">
+                <a href="https://t.me" class="social-btn telegram" target="_blank" rel="noopener">Telegram</a>
+                <a href="https://instagram.com" class="social-btn instagram" target="_blank" rel="noopener">Instagram</a>
             </div>
         </div>
     </footer>
 
+    <script>
+        
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                
+            });
+        });
+    </script>
 </body>
 </html>

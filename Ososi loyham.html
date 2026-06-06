@@ -1,138 +1,531 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Car Showroom</title>
+<title>Premium Car Showroom</title>
 
 <style>
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-header{
-    background:black;
-    color:white;
-    text-align:center;
-    padding:20px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f1115;
+    color: #fff;
+    line-height: 1.6;
 }
 
-nav{
-    background:#222;
-    padding:15px;
-    text-align:center;
+
+nav {
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-size:18px;
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff3838;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.hero{
-    text-align:center;
-    padding:40px;
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.hero img{
-    width:80%;
-    max-width:800px;
-    border-radius:15px;
+.nav-links a:hover {
+    color: #ff3838;
 }
 
-.cars{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding:30px;
+#home {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(15,17,21,1)), 
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.card{
-    background:white;
-    width:220px;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+#home h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.card img{
-    width:100%;
-    border-radius:10px;
+#home p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 30px;
 }
 
-button{
-    background:black;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    cursor:pointer;
-    border-radius:5px;
+.btn-main {
+    background: #ff3838;
+    color: white;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 56, 56, 0.4);
 }
 
-footer{
-    background:black;
-    color:white;
-    text-align:center;
-    padding:20px;
+.btn-main:hover {
+    background: #e02424;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 56, 56, 0.6);
 }
 
+
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff3838;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background: #1a1d24;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 25px;
+}
+
+.car-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.price-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #2ecc71;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.stars {
+    color: #f1c40f;
+}
+
+.btn-buy {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff3838;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    background: #ff3838;
+    color: white;
+}
+
+
+#services {
+    background: #14161d;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.service-box {
+    background: #1a1d24;
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.service-box h3 {
+    margin-bottom: 15px;
+    color: #ff3838;
+}
+
+
+.stats-counter {
+    background: linear-gradient(rgba(255, 56, 56, 0.1), rgba(255, 56, 56, 0.05));
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 10%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-item h2 {
+    font-size: 3rem;
+    color: #ff3838;
+    margin-bottom: 5px;
+}
+
+
+#about {
+    background: #0f1115;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    color: #ccc;
+}
+
+
+#testimonials {
+    background: #14161d;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: #1a1d24;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.review-card p {
+    font-style: italic;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: #ff3838;
+}
+
+
+#contact {
+    background: #0f1115;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1a1d24;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background: #111317;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff3838;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #ff3838;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #e02424;
+}
+
+
+footer {
+    background: #0a0b0d;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Car Showroom</h1>
-<p>Luxury Cars Collection</p>
-</header>
-
 <nav>
-<a href="#">Home</a>
-<a href="./cars.html">Cars</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+    <div class="logo">DRIVEX</div>
+    <div class="nav-links">
+        <a href="#home">Asosiy</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#cars">Avtomollar</a>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#contact">Aloqa</a>
+    </div>
 </nav>
 
-<section class="hero">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-
-<h2>Welcome To Car Showroom</h2>
-<p>Find your dream car here</p>
+<section id="home">
+    <h1>Kashf eting. Haydang. Egalik qiling.</h1>
+    <p>Siz orzu qilgan premium va sport avtomobillari faqat bizda.</p>
+    <a href="#cars" class="btn-main">Katalogga o'tish</a>
 </section>
 
-<section class="cars">
+<section id="services">
+    <h1 class="section-title">Bizning Xizmatlar</h1>
+    <div class="services-grid">
+        <div class="service-box">
+            <h3>Kafolatlangan Sifat</h3>
+            <p>Barcha avtomobillarimiz to'liq texnik ko'rikdan o'tkazilgan va 100% ishonchli.</p>
+        </div>
+        <div class="service-box">
+            <h3>Tezkor Rasmiylashtirish</h3>
+            <p>Xarid hujjatlarini bor-yo'g'i 1 soat ichida tayyorlab topshiramiz.</p>
+        </div>
+        <div class="service-box">
+            <h3>Avto-Kredit</h3>
+            <p>Yillik eng past foiz stavkalari bilan qulay kredit shartlarini taklif etamiz.</p>
+        </div>
+    </div>
+</section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e">
-<h3>BMW</h3>
-<p>$45,000</p>
-<button>Buy Now</button>
+<section id="cars">
+    <h1 class="section-title">Mavjud Avtomobillar</h1>
+
+    <div class="cars-grid">
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=60" alt="BMW M5">
+            <div class="car-info">
+                <h3>BMW M5</h3>
+                <div class="price-rating">
+                    <p class="price">$85,000</p>
+                    <p class="stars">★★★★★</p>
+                </div>
+                <button class="btn-buy">Sotib olish</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=60" alt="Mercedes S-Class">
+            <div class="car-info">
+                <h3>Mercedes S-Class</h3>
+                <div class="price-rating">
+                    <p class="price">$110,000</p>
+                    <p class="stars">★★★★★</p>
+                </div>
+                <button class="btn-buy">Sotib olish</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=60" alt="Audi A8">
+            <div class="car-info">
+                <h3>Audi A8</h3>
+                <div class="price-rating">
+                    <p class="price">$95,000</p>
+                    <p class="stars">★★★★★</p>
+                </div>
+                <button class="btn-buy">Sotib olish</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="./image.png" alt="Range Rover">
+            <div class="car-info">
+                <h3>Range Rover</h3>
+                <div class="price-rating">
+                    <p class="price">$120,000</p>
+                    <p class="stars">★★★★★</p>
+                </div>
+                <button class="btn-buy">Sotib olish</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=60" alt="Toyota Camry">
+            <div class="car-info">
+                <h3>Toyota Camry</h3>
+                <div class="price-rating">
+                    <p class="price">$35,000</p>
+                    <p class="stars">★★★★☆</p>
+                </div>
+                <button class="btn-buy">Sotib olish</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="./image copy 5.png" alt="Tesla Model S">
+            <div class="car-info">
+                <h3>Tesla Model S</h3>
+                <div class="price-rating">
+                    <p class="price">$130,000</p>
+                    <p class="stars">★★★★★</p>
+                </div>
+                <button class="btn-buy">Sotib olish</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="stats-counter">
+    <div class="stat-item">
+        <h2>150+</h2>
+        <p>Sotuvdagi Avtolar</p>
+    </div>
+    <div class="stat-item">
+        <h2>2,500+</h2>
+        <p>Mamnun Mijozlar</p>
+    </div>
+    <div class="stat-item">
+        <h2>15+</h2>
+        <p>Yillik Tajriba</p>
+    </div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
-<h3>Mercedes</h3>
-<p>$50,000</p>
-<button>Buy Now</button>
-</div>
+<section id="about">
+    <h1 class="section-title">Biz haqimizda</h1>
+    <div class="about-content">
+        <p>Biz ko'p yillardan buyon premium klassdagi va eng so'nggi rusurdagi sport avtomobillarini yetkazib berish bilan shug'ullanamiz. Maqsadimiz — mijozlarimizga nafaqat mashina, balki yuqori darajadagi qulaylik, ishonch va haydash zavqini ulashishdir. Har bir mijoz uchun individual yondashuv kafolatlanadi.</p>
+    </div>
+</section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
-<h3>Audi</h3>
-<p>$42,000</p>
-<button>Buy Now</button>
-</div>
+<section id="testimonials">
+    <h1 class="section-title">Mijozlar Fikri</h1>
+    <div class="testimonials-grid">
+        <div class="review-card">
+            <p>"Bu salondan Tesla sotib oldim. Xizmat ko'rsatish juda yuqori darajada, hujjatlarni tez bitirib berishdi."</p>
+            <h4>- Asadbek M.</h4>
+        </div>
+        <div class="review-card">
+            <p>"Mashinalarning holati a'lo darajada. Toza, yangi va kelishilgan narxlarda. Tavsiya qilaman!"</p>
+            <h4>- Sardor K.</h4>
+        </div>
+        <div class="review-card">
+            <p>"Kredit shartlari meni juda quvontirdi. Juda qulay va ortiqcha ovoragarchiliklarsiz bo'ldi."</p>
+            <h4>- Dilnoza T.</h4>
+        </div>
+    </div>
+</section>
 
+<section id="contact">
+    <h1 class="section-title">Biz bilan aloqa</h1>
+    <div class="contact-container">
+        <form action="#">
+            <div class="form-group">
+                <input type="text" placeholder="Ismingiz" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Elektron pochta manzilingiz" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Xabaringizni shu yerga yozing..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Xabarni yuborish</button>
+        </form>
+    </div>
 </section>
 
 <footer>
-<p>© 2026 Car Showroom | All Rights Reserved</p>
+    <p>&copy; 2026 DRIVEX Car Showroom. Barcha huquqlar himoyalangan.</p>
 </footer>
 
 </body>
