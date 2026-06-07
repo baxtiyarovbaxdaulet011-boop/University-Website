@@ -1,192 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Loyihalarim</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
 
-        body {
-            background: linear-gradient(135deg, #05070a, #0b0f19, #05070a);
-            color: #e2e8f0;
-            min-height: 100vh;
-        }
+      body {
+        background: linear-gradient(135deg, #05070a, #0b0f19, #05070a);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 30px 0;
-        }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px 0;
+      }
 
-        
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+      }
+
+      .logo {
+        font-size: 36px;
+        font-weight: 800;
+        color: #00bfff;
+        text-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+        letter-spacing: 1px;
+      }
+
+      .nav {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        padding: 10px 25px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: #94a3b8;
+        margin: 0 15px;
+        font-weight: 600;
+        transition: 0.3s ease;
+      }
+
+      .nav a:hover,
+      .nav a.active {
+        color: #00bfff;
+        text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+      }
+
+      .title {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        color: #ffffff;
+      }
+
+      .title::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #00bfff;
+        margin: 12px auto 0;
+        border-radius: 2px;
+        box-shadow: 0 0 8px #00bfff;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .card {
+        background: #090d16;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 191, 255, 0.15);
+        border-color: rgba(0, 191, 255, 0.5);
+      }
+
+      .card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        filter: brightness(0.85);
+        transition: 0.4s ease;
+      }
+
+      .card:hover img {
+        filter: brightness(1);
+      }
+
+      .card h3 {
+        padding: 22px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #cbd5e1;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 768px) {
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 60px;
+          flex-direction: column;
+          gap: 20px;
         }
-
-        .logo {
-            font-size: 36px;
-            font-weight: 800;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
-            letter-spacing: 1px;
-        }
-
-        .nav {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            padding: 10px 25px;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #94a3b8;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        .nav a:hover, .nav a.active {
-            color: #00bfff;
-            text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
-        }
-
-        
-        .title {
-            text-align: center;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: #ffffff;
-        }
-
-        .title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #00bfff;
-            margin: 12px auto 0;
-            border-radius: 2px;
-            box-shadow: 0 0 8px #00bfff;
-        }
-
-        
         .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+          grid-template-columns: 1fr;
+          gap: 25px;
         }
-
-        .card {
-            background: #090d16;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+        .title {
+          font-size: 32px;
         }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 191, 255, 0.15);
-            border-color: rgba(0, 191, 255, 0.5);
-        }
-
-        .card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            filter: brightness(0.85);
-            transition: 0.4s ease;
-        }
-
-        .card:hover img {
-            filter: brightness(1);
-        }
-
         .card h3 {
-            padding: 22px;
-            font-size: 20px;
-            font-weight: 500;
-            color: #cbd5e1;
-            line-height: 1.5;
+          font-size: 18px;
+          padding: 15px;
         }
-
-        
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .cards {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            .title {
-                font-size: 32px;
-            }
-            .card h3 {
-                font-size: 18px;
-                padding: 15px;
-            }
-        }
+      }
+      a{
+        text-decoration: none;
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-
-    <header>
+  </head>
+  <body>
+    <div class="container">
+      <header>
         <div class="logo">Baxdaulet</div>
         <div class="nav">
-            <a href="./index.html">Men haqimda</a>
-            <a href="./Oilam.html">Oilam</a>
-            <a href="./Loyihalarim.html" class="active">Loyihalarim</a>
-            <a href="./Ososi loyham.html">Asosi loyham</a>
+          <a href="./index.html">Men haqimda</a>
+          <a href="./Oilam.html">Oilam</a>
+          <a href="./Loyihalarim.html" class="active">Loyihalarim</a>
+          <a href="./Ososi loyham.html">Asosi loyham</a>
         </div>
-    </header>
+      </header>
 
-    <main>
+      <main>
         <h2 class="title">Loyihalarim</h2>
 
         <div class="cards">
+          <div class="card">
+            <a href="https://portfoilo0.netlify.app/">
+              <img src="./image copy 10.png" alt="1-oy loyihasi" />
+              <h3>Bu mening 1-oyda qilgan loyiham</h3>
+            </a>
+          </div>
 
-            <div class="card">
-                <img src="./image copy.png" alt="1-oy loyihasi">
-                <h3>Bu mening 1-oyda qilgan loyiham</h3>
-            </div>
+          <div class="card">
+            <img src="./image copy 2.png" alt="2-oy loyihasi" />
+            <h3>Bu mening 2-oyda qilgan loyiham</h3>
+          </div>
 
-            <div class="card">
-                <img src="./image copy 2.png" alt="2-oy loyihasi">
-                <h3>Bu mening 2-oyda qilgan loyiham</h3>
-            </div>
+          <div class="card">
+            <img src="./image copy 3.png" alt="3-oy loyihasi" />
+            <h3>Bu mening 3-oyda qilgan loyiham</h3>
+          </div>
 
-            <div class="card">
-                <img src="./image copy 3.png" alt="3-oy loyihasi">
-                <h3>Bu mening 3-oyda qilgan loyiham</h3>
-            </div>
-
-            <div class="card">
-                <img src="./image copy 4.png" alt="3-oy 5-dars loyihasi">
-                <h3>Bu mening 3-oyning 5-darsida qilgan loyiham</h3>
-            </div>
-
+          <div class="card">
+            <img src="./image copy 4.png" alt="3-oy 5-dars loyihasi" />
+            <h3>Bu mening 3-oyning 5-darsida qilgan loyiham</h3>
+          </div>
         </div>
-    </main>
-
-</div>
-
-</body>
+      </main>
+    </div>
+  </body>
 </html>
